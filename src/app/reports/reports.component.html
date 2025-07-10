@@ -1,0 +1,29 @@
+<div class="container">
+  <h2>Reportes</h2>
+  <div class="report-section">
+    <h3>1. Hombres vs Mujeres</h3>
+    <div class="bar-graph">
+      <div class="bar" [style.width.%]="gender.hombresPerc" style="background:#1976d2">Hombres: {{gender.hombres}}</div>
+      <div class="bar" [style.width.%]="gender.mujeresPerc" style="background:#e91e63">Mujeres: {{gender.mujeres}}</div>
+    </div>
+  </div>
+  <div class="report-section">
+    <h3>2. Menores vs Mayores</h3>
+    <div class="bar-graph">
+      <div class="bar" [style.width.%]="age.menoresPerc" style="background:#43a047">Menores: {{age.menores}}</div>
+      <div class="bar" [style.width.%]="age.mayoresPerc" style="background:#ff9800">Mayores: {{age.mayores}}</div>
+    </div>
+  </div>
+  <div class="report-section">
+    <h3>3. Hombres/Mujeres Menores/Mayores</h3>
+    <div class="pie-graph">
+      <div class="pie" [style.background]="pieGradient"></div>
+      <div class="legend">
+        <div><span class="dot" style="background:#1976d2"></span> Hombres Menores: {{genderAge.hombresMenores}}</div>
+        <div><span class="dot" style="background:#43a047"></span> Hombres Mayores: {{genderAge.hombresMayores}}</div>
+        <div><span class="dot" style="background:#e91e63"></span> Mujeres Menores: {{genderAge.mujeresMenores}}</div>
+        <div><span class="dot" style="background:#ff9800"></span> Mujeres Mayores: {{genderAge.mujeresMayores}}</div>
+      </div>
+    </div>
+  </div>
+</div> 

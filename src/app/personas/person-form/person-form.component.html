@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>{{isEdit ? 'Editar' : 'Nueva'}} persona</h2>
+  <form (ngSubmit)="save()" *ngIf="loaded">
+    <input type="text" [(ngModel)]="person.nombre" name="nombre" placeholder="Nombre" required />
+    <input type="number" [(ngModel)]="person.edad" name="edad" placeholder="Edad" required min="0" />
+    <select [(ngModel)]="person.sexo" name="sexo" required>
+      <option value="" disabled>Sexo</option>
+      <option value="M">Hombre</option>
+      <option value="F">Mujer</option>
+    </select>
+    <button type="submit" [disabled]="loading">Guardar</button>
+    <div class="error" *ngIf="error">{{error}}</div>
+  </form>
+  <div *ngIf="!loaded" class="loading">Cargando...</div>
+</div> 

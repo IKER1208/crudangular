@@ -1,0 +1,11 @@
+<div class="container" *ngIf="person">
+  <h2>Detalle de persona</h2>
+  <div class="detail">
+    <div><b>Nombre:</b> {{person.nombre}}</div>
+    <div><b>Edad:</b> {{person.edad}}</div>
+    <div><b>Sexo:</b> {{person.sexo === 'M' ? 'Hombre' : 'Mujer'}}</div>
+  </div>
+  <button (click)="volver()">Volver</button>
+</div>
+<div *ngIf="loading" class="loading">Cargando...</div>
+<div *ngIf="error" class="error">{{error}}</div> 

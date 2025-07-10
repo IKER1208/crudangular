@@ -1,0 +1,9 @@
+.container { max-width: 700px; margin: 5vh auto; background: #fff; border-radius: 1.2rem; box-shadow: 0 2px 24px #0001; padding: 2rem; }
+h2 { font-weight: 600; margin-bottom: 2rem; }
+.report-section { margin-bottom: 2.5rem; }
+.bar-graph { display: flex; gap: 1rem; margin-top: 1rem; }
+.bar { color: #fff; padding: 0.7rem 1rem; border-radius: 0.7rem; font-weight: 600; font-size: 1rem; transition: width 0.4s; white-space: nowrap; }
+.pie-graph { display: flex; align-items: center; gap: 2rem; margin-top: 1rem; }
+.pie { width: 120px; height: 120px; border-radius: 50%; background: conic-gradient(#1976d2 0% 25%, #43a047 25% 50%, #e91e63 50% 75%, #ff9800 75% 100%); box-shadow: 0 2px 12px #0002; }
+.legend { display: flex; flex-direction: column; gap: 0.5rem; }
+.dot { display: inline-block; width: 1.1em; height: 1.1em; border-radius: 50%; margin-right: 0.5em; } 
