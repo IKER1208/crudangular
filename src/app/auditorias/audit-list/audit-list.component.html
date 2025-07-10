@@ -1,0 +1,24 @@
+<div class="container">
+  <h2>Auditorías</h2>
+  <div *ngIf="loading">Cargando auditorías...</div>
+  <div *ngIf="error" class="error">{{error}}</div>
+  <table *ngIf="!loading && logs.length">
+    <thead>
+      <tr>
+        <th>Usuario</th>
+        <th>Operación</th>
+        <th>Sobre</th>
+        <th>Fecha</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let log of logs">
+        <td>{{log.usuario}}</td>
+        <td>{{log.operacion}}</td>
+        <td>{{log.sobre || log.id}}</td>
+        <td>{{log.fecha | date:'short'}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div *ngIf="!loading && !logs.length" class="empty">No hay auditorías registradas.</div>
+</div> 

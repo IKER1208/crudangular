@@ -1,0 +1,6 @@
+<nav *ngIf="auth.isLoggedIn()">
+  <button (click)="router.navigate(['/personas'])">Personas</button>
+  <button (click)="router.navigate(['/reportes'])">Reportes</button>
+  <button (click)="router.navigate(['/auditorias'])">Auditorías</button>
+  <button (click)="logout()">Salir</button>
+</nav> 
