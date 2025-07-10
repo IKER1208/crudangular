@@ -10,7 +10,9 @@ export class AuthService {
 
   async login(email: string, password: string) {
     const res: any = await this.http.post(`${this.api}/login`, { email, password }).toPromise();
-    const token = res.token || ''; 
+    console.log('Respuesta login:', res); // <-- Nuevo log para depuración
+    // Intentar obtener el token de varias propiedades posibles
+    const token = res.token || res.access_token || '';
     localStorage.setItem(this.tokenKey, token);
     console.log('Token guardado:', token);
   }

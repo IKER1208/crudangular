@@ -5,9 +5,9 @@
   <table *ngIf="!loading && logs.length">
     <thead>
       <tr>
-        <th>Usuario</th>
+        <th>Usuario que realizó</th>
         <th>Operación</th>
-        <th>Sobre</th>
+        <th>Persona afectada</th>
         <th>Fecha</th>
       </tr>
     </thead>
@@ -15,7 +15,7 @@
       <tr *ngFor="let log of logs">
         <td>{{log.usuario}}</td>
         <td>{{log.operacion}}</td>
-        <td>{{log.sobre || log.id}}</td>
+        <td>{{log.nombrePersona || log.sobre || log.id}}</td>
         <td>{{log.fecha | date:'short'}}</td>
       </tr>
     </tbody>
